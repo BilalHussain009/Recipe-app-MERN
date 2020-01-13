@@ -1,4 +1,5 @@
 import React from 'react'
+import Project from '../components/Projects'
 const HomePage = () => (
     <div className='home'>
         <div className="area" >
@@ -20,7 +21,7 @@ const HomePage = () => (
             <button className='introbtn'>Check Out My Work</button>
 
         </div>
-
+        <Project/>
 
     </div>
 )

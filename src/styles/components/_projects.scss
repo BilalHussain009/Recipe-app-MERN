@@ -1,0 +1,12 @@
+.projects{
+    height: 100vh;
+    background-color: #dfe6e9;
+    position: relative;
+    h1{
+        margin: 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
