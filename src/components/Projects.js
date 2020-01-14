@@ -2,7 +2,7 @@ import React from 'react'
 const Project = () => (
     <section className="projects">
 
-        <h1>MY PROJECTS</h1>
+        <h1 id="projects" >MY PROJECTS</h1>
 
         <ul className="cards">
             <li className="cards__item">

@@ -9,12 +9,13 @@ export const history = createHistory();
 
 const AppRouter = () => (
   <Router history={history}>
-    <div>
-      <Switch>
-        <PublicRoute path="/" component={HomePage} exact={true} />
-        
-      </Switch>
-    </div>
+
+      <div>
+        <Switch>
+          <PublicRoute path="/" component={HomePage} exact={true} />
+
+        </Switch>
+      </div>
   </Router>
 );
 

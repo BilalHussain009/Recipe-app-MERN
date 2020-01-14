@@ -1,0 +1,30 @@
+.nav{
+    display: flex;
+    z-index: -1;
+    list-style: none;
+    justify-content: space-evenly;
+    background-color: #242222;
+    margin: 0px;
+    li{
+        margin-top: 5vh;
+
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+        
+        padding: 15px;
+        transition: .5s;
+        border-radius: 10px;
+    }
+    li a:hover{
+        background-color: cornsilk;
+        color: black;
+        
+    }
+    
+}
+.nav-link{
+    margin-right: 1vw;
+    width: 4vh;
+}
