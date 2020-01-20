@@ -4,7 +4,8 @@ import createHistory from 'history/createBrowserHistory';
 import HomePage from '../components/Homepage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
-
+import Projectmodal from '../components/Projectmodal';
+import Test from '../components/Test';
 export const history = createHistory();
 
 const AppRouter = () => (
@@ -13,7 +14,8 @@ const AppRouter = () => (
       <div>
         <Switch>
           <PublicRoute path="/" component={HomePage} exact={true} />
-
+          <PublicRoute path='/test' component={Test}/>
+          <PublicRoute path='/project' component={Projectmodal}/>
         </Switch>
       </div>
   </Router>
