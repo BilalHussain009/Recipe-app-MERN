@@ -14,7 +14,6 @@ const AppRouter = () => (
       <div>
         <Switch>
           <PublicRoute path="/" component={HomePage} exact={true} />
-          <PublicRoute path='/test' component={Test}/>
           <PublicRoute path='/project' component={Projectmodal}/>
         </Switch>
       </div>

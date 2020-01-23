@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/BilalHussain009/Portfolio",
   "name": "boilerplate-react-app",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,8 +8,8 @@
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "predeploy": "yarn run build:prod",
-    "deploy": "gh-pages -d build:dev",
+    "predeploy": "node server/server.js",
+    "deploy": "gh-pages -d build:prod",
     "dev-server": "webpack-dev-server",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
@@ -28,6 +29,7 @@
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "firebase": "4.2.0",
+    "gh-pages": "^2.2.0",
     "history": "4.7.2",
     "moment": "2.18.1",
     "node-sass": "^4.13.0",

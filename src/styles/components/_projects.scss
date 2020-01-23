@@ -77,6 +77,7 @@ img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    width: 100%
   }
   .card:hover .card__image {
     -webkit-filter: contrast(100%);

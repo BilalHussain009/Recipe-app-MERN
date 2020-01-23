@@ -26,9 +26,7 @@ class Project extends React.Component {
                             <div className="card__content">
                                 <button className="card__title" onClick={() => this.selectedProject('Ecommerce')}>React Ecommerce Store</button>
                                 <p className="card__text"><ul><li>ReactJS</li><li>Redux</li><li>Firebase</li><li>PayPal</li></ul></p>
-                                <a href="https://github.com/BilalHussain009/React-Demo-Store-E-commerce" target='_blank'><button className="btn btn--block card__btn">GitHub</button></a>
-                                <a href="http://maldinifashion.herokuapp.com/" target='_blank'><button className="btn btn--block card__btn">Demo</button></a>
-
+                               
                             </div>
                         </div>
                     </li>
@@ -37,10 +35,8 @@ class Project extends React.Component {
                             <div className="card__image card__image--river"></div>
                             <div className="card__content">
                                 <button className="card__title" onClick={() => this.selectedProject('Budget')}>Budget App</button>
-                                <p className="card__text">A simple React App for managing common expenses. This app includes all the CRUD operations with firebase</p>
-                                <a href="https://github.com/BilalHussain009/Expensify-app-bilal" target='_blank'><button className="btn btn--block card__btn">GitHub</button></a>
-
-                                <a href="https://expensify-bilal-app.herokuapp.com/dashboard" target='_blank'><button className="btn btn--block card__btn">Demo</button></a>
+                                <p className="card__text"><ul><li>Javascript</li><li>CSS</li><li>HTML</li><li>Jquery</li></ul></p>
+                               
 
                             </div>
                         </div>
@@ -50,10 +46,8 @@ class Project extends React.Component {
                             <div className="card__image card__image--record"></div>
                             <div className="card__content">
                                 <button className="card__title" onClick={() => this.selectedProject('Weather')}>Wether App</button>
-                                <p className="card__text">Simple Weather app for finding the forecast and temperature using location. This was built with node.js</p>
-                                <a href="https://github.com/BilalHussain009/node-weather-app" target='_blank'><button className="btn btn--block card__btn">GitHub</button></a>
+                                <p className="card__text"><ul><li>NodeJS</li><li>Express</li><li>Darksky API</li><li>SASS</li></ul></p>
 
-                                <a href="https://weatherappbilal.herokuapp.com/" target='_blank'><button className="btn btn--block card__btn">Demo</button></a>
                             </div>
                         </div>
                     </li>
