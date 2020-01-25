@@ -20,7 +20,6 @@ class ContactForm extends React.Component {
             placeholder: `Security Check what is ${this.state.num1} + ${this.state.num2}`,
             ans: this.state.num1 + this.state.num2
         });
-        console.log(this.props)
 
     }
 
