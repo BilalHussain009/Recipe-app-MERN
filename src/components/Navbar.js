@@ -1,13 +1,47 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Helmet } from "react-helmet"
 
 const Navbar = () => (
-    <ul className='nav'>
-        <li><a target='_blank' href='https://github.com/BilalHussain009' ><img className='nav-link' src='https://i.ibb.co/k46XS1n/github-logo.png' />Github</a></li>
-        <li><a target='_blank' href='https://stackoverflow.com/users/10436299/bilal' ><img className='nav-link' src='https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.svg?v=f13ebeedfa9e' />Stackoverflow</a></li>
-        <li><AnchorLink href='#projects' ><img className='nav-link' src='https://image.flaticon.com/icons/svg/1441/1441021.svg' />Projects</AnchorLink></li>
-        <li><AnchorLink href='#contact' ><img className='nav-link' src='https://image.flaticon.com/icons/svg/1481/1481337.svg' />Contact</AnchorLink></li>
-    </ul>
+    <header className="main-header">
+        <Helmet>
+            <script>
+                {`const header = document.querySelector('.main-header');
+
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  if(scrollPos > 10){
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+})`}
+            </script>
+        </Helmet>
+        <div className="logo">
+            <a href="#">PORTFOLIO</a>
+        </div>
+
+        <input type="checkbox" className="menu-btn" id="menu-btn"></input>
+        <label htmlFor="menu-btn" className="menu-icon">
+            <span className="menu-icon__line"></span>
+        </label>
+
+        <ul className="nav-links">
+            <li className="nav-link">
+                <AnchorLink href="#projects">PROJECTS</AnchorLink>
+            </li>
+            <li className="nav-link">
+            <AnchorLink href='#contact'>CONTACT</AnchorLink>
+            </li>
+            <li className="nav-link">
+                <a href="https://github.com/BilalHussain009" target='_blank'>GITHUB</a>
+            </li>
+            <li className="nav-link">
+                <a href="https://stackoverflow.com/users/10436299/bilal" target='_blank'>STACKOVERFLOW</a>
+            </li>
+        </ul>
+    </header>
 
 );
 export default Navbar;

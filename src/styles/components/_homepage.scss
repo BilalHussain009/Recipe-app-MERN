@@ -43,7 +43,8 @@ $buttonbackcolor:#34e7e4;
 
 //BackGround Animation
 .area{
-    background: #242222;  
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(143,20,39,1) 90%);
+
     width: 100%;
     height:100vh;
     overflow: hidden;

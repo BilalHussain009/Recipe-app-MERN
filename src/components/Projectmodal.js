@@ -77,6 +77,7 @@ class Projectmodal extends React.Component {
                 onRequestClose={this.props.clearProjects}
                 ariaHideApp={false}
                 closeTimeoutMS={1000}
+                shouldReturnFocusAfterClose={true}
             >
                 <div className='Modal-image'>
                     <img src={this.conditionalImage()}></img>
