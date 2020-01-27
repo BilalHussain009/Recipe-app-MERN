@@ -19,20 +19,26 @@ class Project extends React.Component {
             name: 'Maldini Fashion',
             under: 'E-commerce Store',
             tagline: 'A Demo Store Built with react , redux , firebase and node and have integration of Paypal gateway',
-            image: 'https://i.ibb.co/YWqmXqv/Capture.png'
+            image: 'https://i.ibb.co/YWqmXqv/Capture.png',
+            github:'https://github.com/BilalHussain009/React-Demo-Store-E-commerce',
+            link:'http://maldinifashion.herokuapp.com/'
 
         },
         budget: {
             name: ' Budget App',
             under: 'Personal Finance Manager',
             tagline: 'Application Built for users to manage their daily expanses and keep track of what they are spending and how much theya are spending. Users can alse login with Google to save data on the cloud and access data from other devices',
-            image: 'https://i.ibb.co/XCsqK67/pic.png'
+            image: 'https://i.ibb.co/XCsqK67/pic.png',
+            github:'https://github.com/BilalHussain009/Expensify-app-bilal',
+            link:'https://expensify-bilal-app.herokuapp.com/'
         },
         weather: {
             name: 'Weahter App',
             under: 'Application for quick weather updates of your area',
             tagline: 'Weather app for user to quickly get their local forecast ,it was built with node.js and is using the dark sky api. Currently the app only fetches the weather of user entered location ,in future i am planning to add functunality to select location from a map',
-            image: 'https://i.ibb.co/Z60pSWW/Weather-app.png'
+            image: 'https://i.ibb.co/Z60pSWW/Weather-app.png',
+            github:'https://github.com/BilalHussain009/node-weather-app',
+            link:'https://weatherappbilal.herokuapp.com/'
         }
     }
     render() {

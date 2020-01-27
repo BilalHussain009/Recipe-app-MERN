@@ -2,7 +2,7 @@
   font-family: Raleway;
   background-color: #242222;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 90vh;
@@ -38,10 +38,17 @@
   h2 {
     color: #db3056;
     font-size: 2.5vh;
+    margin-top: 2vh;
   }
   hr {
     background-color: white;
+    margin-top: 1vh;
   }
+  p{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
 }
 .modal-github {
   background-color: white;
@@ -67,4 +74,33 @@
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+}
+@media only screen and (max-width: 580px) {
+  .Modal{
+    width: 80%;
+  }
+  .Modal-image {
+    display: none;
+  }
+  .Modal-Description {
+    
+    h1 {
+      color: #db3056;
+      margin: 0;
+    }
+    h2 {
+      color: #db3056;
+      font-size: 2.5vh;
+      margin-top: 2vh;
+    }
+    hr {
+      background-color: white;
+      margin-top: 1vh;
+    }
+    p{
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+    
+  }
 }
