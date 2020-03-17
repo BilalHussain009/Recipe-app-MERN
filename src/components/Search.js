@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import {searchQuery} from '../actions/searchcontroller';
+import {connect} from 'react-redux'
 class Search extends React.Component {
     searchHandle=(e)=>{
         this.setState({
@@ -9,8 +10,7 @@ class Search extends React.Component {
     }
     submitHandler= async(e)=>{
         e.preventDefault()
-        const res=await axios.get('https://forkify-api.herokuapp.com/api/search?q=pizza')
-        console.log(res)
+        this.props.searchQuery(this.state.query)
     }
     state={
         query:''
@@ -27,4 +27,7 @@ class Search extends React.Component {
     }
 
 }
-export default Search
+const mapDispatchToProps=(dispatch)=>({
+    searchQuery:(query)=>dispatch(searchQuery(query))
+})
+export default connect(undefined,mapDispatchToProps)(Search)
