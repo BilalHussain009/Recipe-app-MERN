@@ -1,0 +1,38 @@
+.search-box {
+  font-family: "Courgette";
+  height: 100px;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+
+  position: relative;
+  .cont-box {
+    position: relative;
+    .search-main {
+      float: right;
+      font-size: 14px;
+      position: absolute;
+      color: #000000;
+      left: 80px;
+    }
+    .search-sub {
+      float: right;
+      color: black;
+      font-size: 12px;
+      position: absolute;
+      top: 50px;
+      left: 100px;
+    }
+  }
+
+  .search-img {
+    float: left;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    position: absolute;
+    top: 20%;
+  }
+}
