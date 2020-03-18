@@ -18,9 +18,9 @@ class Search extends React.Component {
     render() {
         return (
             <div className='home'>
-                <form onChange={this.searchHandle} onSubmit={this.submitHandler}>
-                    <input type='text'></input>
-                    <input type='submit'></input>
+                <form className="search"  onChange={this.searchHandle} onSubmit={this.submitHandler}>
+                    <input placeholder="Search here..."  type='text'></input>
+                    <button type='submit'>Search</button>
                 </form>
             </div>
         )

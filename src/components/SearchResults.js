@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {setNextPage} from '../actions/searchcontroller'
 class SearchResults extends React.Component {
     state = {
         recipe: this.props.recipe,
         start:0,
         end:10,
-        display: []
     }
     isEmpty(obj) {
         return !Object.keys(obj).length > 0;
@@ -20,46 +20,49 @@ class SearchResults extends React.Component {
             </div>
         )
     }
+    
     pageUp = () => {
-        this.setState((prevState, props) => ({
-            page: prevState.page + 1,
-        }));
-        this.Pagination()
+        // if(end+10>this.props.recipe.recipe.length){
+        //     console.log('error')
+        // }
+        let start=this.state.start+10
+        let end=this.state.end+10
+        this.setState({
+            start,
+            end
+        }, this.props.setNextPage(start,end,this.props.recipe))
+       
         
     }
     pageDown = () => {
-        this.setState((prevState, props) => ({
-            page: prevState.page - 1,
-        }));
+        let start=this.state.start-10
+        let end=this.state.end-10
+        this.setState({
+            start,
+            end
+        }, this.props.setNextPage(start,end,this.props.recipe))
     }
     
-    Pagination(){
-      
-        const start = this.state.start
-        const end=this.state.end
-        const newArray = this.props.recipe.recipe.slice(start,end)
-        this.setState({
-            start:end,
-            end:end+10,
-            display: newArray 
-        })
-        
-        console.log(this.state)
-    }
+    
     render() {
         return (
             <div>
                 <button onClick={this.pageUp}>Next</button>
                 <button onClick={this.pageDown}>Prev</button>
-                {this.isEmpty(this.props.recipe) ? 'No Items' : this.state.display.map((element) => {
-                    console.log('ad')
+               
+                {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
                     return this.recipeReturner(element)
                 })}
             </div>
         )
     }
 }
+
 const mapStateToProps = (state) => ({
-    recipe: state.recipe
+    recipe: state.recipe,
+    page:state.page
 })
-export default connect(mapStateToProps)(SearchResults);
+const mapDispatchToProps=(dispatch)=>({
+    setNextPage:(start,end,recipe)=>dispatch(setNextPage(start,end,recipe))
+})
+export default connect(mapStateToProps,mapDispatchToProps)(SearchResults);
