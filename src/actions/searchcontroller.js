@@ -8,6 +8,7 @@ const setPage = (page) => ({
     type: 'setPage',
     page
 })
+
 export const setNextPage = (start, end, recipe) => {
 
     const recipes = recipe.recipe.slice(start, end)

@@ -1,7 +1,8 @@
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
+import axios from 'axios'
 import Search from './Search'
 import SearchResults from './SearchResults'
+import RecipeDescription from './RecipeDescription'
 class HomePage extends React.Component {
     
     render() {
@@ -9,6 +10,7 @@ class HomePage extends React.Component {
             <div className='home'>
                 <Search/>
                 <SearchResults/>
+                <RecipeDescription/>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setNextPage } from '../actions/searchcontroller'
+import SearchItem from './SearchItem'
 class SearchResults extends React.Component {
     state = {
         recipe: this.props.recipe,
@@ -59,8 +60,11 @@ class SearchResults extends React.Component {
                 <button onClick={this.pageUp}>Next</button>
                 <button onClick={this.pageDown}>Prev</button>
 
-                {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
+                {/* {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
                     return this.recipeReturner(element)
+                })} */}
+                 {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
+                    return <SearchItem item={element}/>
                 })}
             </div>
         )

@@ -1,0 +1,28 @@
+.description {
+  font-family: "Rubik";
+  float: right;
+  height: 90%;
+  width: 45%;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  .description-title {
+    font-weight: 500;
+    font-size: 28px;
+  }
+  .image-box {
+    height: 40%;
+    width: 100%;
+    .des-image {
+      width: 100%;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
