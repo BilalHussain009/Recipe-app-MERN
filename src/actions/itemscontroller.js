@@ -3,6 +3,7 @@ const getItems=(items)=>({
     type:'setItems',
     items
 })
+
 const setIng=(ing)=>{
     return{
         type:'setIng',

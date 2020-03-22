@@ -1,38 +1,136 @@
-.search-box {
-  font-family: "Courgette";
-  height: 100px;
-  width: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
+.search-box-back{
+  background-color: #fff;
+  width: 330px;
+  height: 1220px;
+  position: absolute;
+  border-radius: 16px;
+  margin-left: 20px;
+  top: 26.5%;
+  color: black;
+}
+:root {
+  --color-primary: #2b3c46;
+  --color-primary-dark: #222f37;
+  --color-primary-light: #344955;
+  --color-secondary: #f9aa33;
+  --color-tertiary: #bdc4c9;
+  --color-blue: #4285F4;
+  --color-red: #DB4437;
+  --color-yellow: #F4B400;
+  --color-green: #0F9D58;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  //--color-primary: #344955;
+  //--color-primary-dark: #232F34;
+  //--color-primary-light: #4A6572;
+  //--color-secondary: #f9aa33;
+  //--color-tertiary: #FFFFFF;
+}
 
-  position: relative;
-  .cont-box {
-    position: relative;
-    .search-main {
-      float: right;
-      font-size: 14px;
-      position: absolute;
-      color: #000000;
-      left: 80px;
-    }
-    .search-sub {
-      float: right;
-      color: black;
-      font-size: 12px;
-      position: absolute;
-      top: 50px;
-      left: 100px;
-    }
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .search-img {
-    float: left;
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    position: absolute;
-    top: 20%;
+
+
+.mini-card {
+  width: 333px;
+  height: 111px;
+  background-color: transparent;
+}
+
+.media-image {
+  // background-image: url("http://static1.squarespace.com/static/5c66d59fbfba3e11a57a7d07/5c93c0a04e17b604bcaba64d/5c93c1e7e79c7066bd89254a/1553187813240/?format=1500w");
+  background-repeat: no-repeat;
+  background-position: 85% 4%;
+  background-size: 21%;
+  background-color: var(--color-blue);
+}
+
+.mdc-card__primary-action:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.mdc-card__primary-action:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.card-info {
+  background-color: transparent;
+  padding: 0.8rem 1rem 1rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 16px;
+
+}
+
+.card-info > h1 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  color: var(--color-white);
+  font-weight: 400;
+  text-align: left;
+}
+
+.card-info > h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  color: var(--color-white);
+  font-weight: 400;
+  text-align: left;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+}
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $red;
+  border-radius: 0.6em;
+  color: $red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 12px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
   }
+}
+
+//BUTTON 1
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 40px 40px $red inset;
+  }
+}  
+.third {
+  border-color: $blue;
+  color: #fff;
+  box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+  }
+} 
+.rlink{
+  text-decoration: none;
 }

@@ -1,28 +1,124 @@
+
 .description {
   font-family: "Rubik";
   float: right;
-  height: 90%;
+  height: 1220px;
   width: 45%;
-  color: white;
+  color: black;
   position: absolute;
-  top: 30%;
-  left: 40%;
+  background-color: white;
+  top: 26.5%;
+  left: 30%;
+  position: absolute;
+  border-radius: 16px;
+  margin-left: 20px;
   .description-title {
     font-weight: 500;
     font-size: 28px;
+    padding: 10px;
+    text-align: center;
   }
   .image-box {
-    height: 40%;
+    height: 25%;
     width: 100%;
+    border-radius: 16px;
+
     .des-image {
       width: 100%;
       display: block;
       height: 100%;
       object-fit: cover;
+      border-radius: 16px;
+
     }
   }
   h1 {
     font-size: 15px;
     font-weight: 300;
+    background-color: lightgray;
+    margin: 0;
+    padding: 5px;
+
   }
+  .serving-controller{
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    .serving-time{
+      font-size: 14px;
+      
+    }
+    .serving-qty{
+      display: flex;
+    }
+    
+  }
+  .btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $red;
+    border-radius: 0.6em;
+    color: $red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }
+  }
+  
+  //BUTTON 1
+  .first {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px $red inset;
+    }
+  }
+  
+  
+  //BUTTON 3
+  .third {
+    border-color: $blue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+    transition: all 150ms ease-in-out;
+    
+    &:hover {
+      box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+    }
+  }
+  
 }
+.title{
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

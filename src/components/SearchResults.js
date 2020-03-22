@@ -13,12 +13,12 @@ class SearchResults extends React.Component {
     }
     recipeReturner(element) {
         let newTitle
-        if(element.title.length>25){
-            newTitle=element.title.substring(0,25)
-            newTitle=newTitle+'...';
+        if (element.title.length > 25) {
+            newTitle = element.title.substring(0, 25)
+            newTitle = newTitle + '...';
         }
-        else{
-            newTitle=element.title
+        else {
+            newTitle = element.title
         }
         return (
             <div className='search-box'>
@@ -56,16 +56,22 @@ class SearchResults extends React.Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.pageUp}>Next</button>
-                <button onClick={this.pageDown}>Prev</button>
+            <div className='search-box-back'>
+
 
                 {/* {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
                     return this.recipeReturner(element)
                 })} */}
-                 {this.isEmpty(this.props.recipe) ? 'No Items' : this.props.page.page.map((element) => {
-                    return <SearchItem item={element}/>
+                {this.isEmpty(this.props.recipe) ? '' : this.props.page.page.map((element) => {
+                    return <SearchItem item={element} />
                 })}
+                {
+                    this.isEmpty(this.props.recipe) ?<p></p>:<div>
+                    <button className='btn third' onClick={this.pageUp}>Next</button>
+                    <button className='btn first' onClick={this.pageDown}>Prev</button>
+                </div>
+                }
+                
             </div>
         )
     }

@@ -4,7 +4,16 @@ const update=(ing)=>{
         ing
     }
 }
-export const updateIng=(ing,old,New)=>{
+const getItems=(items)=>({
+    type:'setItems',
+    items
+})
+
+export const updateIng=(ing,old,New,item)=>{
+    let item1=item.items;
+    item1.recipe.serving=New;
+    console.log(item1)
+
     let newing=[]
     ing.forEach(element => {
         let tempElement=element
@@ -16,6 +25,7 @@ export const updateIng=(ing,old,New)=>{
         
     });    
     return (dispatch)=>{
+        dispatch(getItems(item1))
         dispatch(update(newing))
     }
 }
