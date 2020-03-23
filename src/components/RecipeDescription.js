@@ -4,6 +4,7 @@ import { startUpdateItem } from '../actions/itemscontroller'
 import { Fraction } from 'fractional'
 import { updateIng } from '../actions/ingredientscontroller'
 import { startAddToShoppingList } from '../actions/shoppinglist'
+import {addToFavourite} from '../actions/fav'
 class RecipeDescription extends React.Component {
 
     state = {
@@ -74,6 +75,7 @@ class RecipeDescription extends React.Component {
                 </h1>
                 {this.isEmpty(this.props.ing) ? '' :
                     <div className='serving-controller'>
+                        <button className="btn first" onClick={() => addToFavourite(this.props.item.items.recipe)}>Add to Favourite</button>
                         <div className='serving-time'>
                             <h2> {this.isEmpty(this.props.item) ? '' : this.props.item.items.recipe.time}Minutes</h2>
                         </div>
@@ -111,6 +113,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     updateIng: (ing, oldserving, newserving,item) => dispatch(updateIng(ing, oldserving, newserving,item)),
     startUpdateItem: (items) => dispatch(startUpdateItem(items)),
-    startAddToShoppingList: (Old, New) => dispatch(startAddToShoppingList(Old, New))
+    startAddToShoppingList: (Old, New) => dispatch(startAddToShoppingList(Old, New)),
 })
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeDescription);
