@@ -1,4 +1,4 @@
-import React , { Component } from 'react'
+import React from 'react'
 import axios from 'axios'
 import Search from './Search'
 import SearchResults from './SearchResults'
@@ -15,7 +15,7 @@ class HomePage extends React.Component {
                 <SearchResults/>
                 <RecipeDescription/>
                 <ShoppingList/>
-                Component
+                
             </div>
 
         )
