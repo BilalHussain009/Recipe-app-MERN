@@ -4,6 +4,7 @@ import createHistory from 'history/createBrowserHistory';
 import HomePage from '../components/Homepage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import test from '../components/test'
 export const history = createHistory();
 
 const AppRouter = () => (
@@ -12,6 +13,8 @@ const AppRouter = () => (
       <div>
         <Switch>
           <PublicRoute path="/" component={HomePage} exact={true} />
+          <PublicRoute path="/test" component={test} exact={true} />
+
         </Switch>
       </div>
   </Router>
