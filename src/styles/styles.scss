@@ -1,7 +1,8 @@
 @import './base/settings';
 @import './base/base';
-@import './components/search';
-@import './components/searchresult';
-@import './components/recipedescription';
-@import './components/shoplist';
-@import './components/favourite';
+@import './components/homepage';
+
+@import './components/navbar';
+@import './components/contactform';
+@import './components/projects';
+@import './components/modal';
